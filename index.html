@@ -46,7 +46,7 @@
         </div>
         <div class="logo">
             <div class="container">
-                <div class="logo__pic"><img src="img/logo.png" alt="WG"></div>
+                <div class="logo__wrapper"><img class="logo__img" src="img/logo.png" alt="WG"></div>
                 <h1 class="logo__title">BE SURE YOU PUT YOUR FEET
                     <span class="logo__title logo__title--bold">IN THE RIGHT PLACE</span>
                 </h1>
@@ -54,7 +54,7 @@
         </div>
         <div class="call">
             <div class="call__wrapper">
-                <form action="" class="call__form">
+                <form id="zip" action="" class="call__form">
                     <input type="text" name="zip" placeholder="Enter your zip code" class="call__inp">
                     <div class="photo">
                         <div class="photo__top">
@@ -73,7 +73,8 @@
                         </div>
                     </div>
                     <p class="call__descr">This is Photoshop's version of<br> Lorem Ipsum</p>
-                    <input type="submit" value="PRESS ME" class="call__press">
+                    <input type="submit" value="PRESS ME" class="call__press js-script-valid">
+                    <input type="submit" value="NOT CORRECT" class="is-invalid is-hidden js-script-invalid">
                 </form>
             </div>
         </div>
@@ -87,7 +88,7 @@
         <div class="carousel js-script-carousel">
             <div class="slide">
                 <div class="doc">
-                    <div class="doc__img"><img src="img/doc.png" alt="doc"></div>
+                    <div class="doc__img"><img class="doc__pic" src="img/doc.png" alt="doc"></div>
                     <div class="doc__descr">
                         <h3>Documents</h3>
                         <p class="slide__txt">This is Photoshop's version of Lorem ipsum. Proin gravida nibh
@@ -95,7 +96,7 @@
                     </div>
                 </div>
                 <div class="photos">
-                    <div class="photos__img"><img src="../img/camera.png" alt="cam"></div>
+                    <div class="photos__img"><img class="doc__pic" src="../img/camera.png" alt="cam"></div>
                     <div class="photos__descr">
                         <h3>Photos</h3>
                         <p class="slide__txt">This is Photoshop's version of Lorem ipsum. Proin gravida nibh
@@ -105,7 +106,7 @@
             </div>
             <div class="slide">
                 <div class="doc">
-                    <div class="doc__img"><img src="img/doc.png" alt="doc"></div>
+                    <div class="doc__img"><img class="doc__pic" src="img/doc.png" alt="doc"></div>
                     <div class="doc__descr">
                         <h3>Documents</h3>
                         <p class="slide__txt">This is Photoshop's version of Lorem ipsum. Proin gravida nibh
@@ -113,7 +114,7 @@
                     </div>
                 </div>
                 <div class="photos">
-                    <div class="photos__img"><img src="../img/camera.png" alt="cam"></div>
+                    <div class="photos__img"><img class="doc__pic" src="../img/camera.png" alt="cam"></div>
                     <div class="photos__descr">
                         <h3>Photos</h3>
                         <p class="slide__txt">This is Photoshop's version of Lorem ipsum. Proin gravida nibh
@@ -123,7 +124,7 @@
             </div>
             <div class="slide">
                 <div class="doc">
-                    <div class="doc__img"><img src="img/doc.png" alt="doc"></div>
+                    <div class="doc__img"><img class="doc__pic" src="img/doc.png" alt="doc"></div>
                     <div class="doc__descr">
                         <h3>Documents</h3>
                         <p class="slide__txt">This is Photoshop's version of Lorem ipsum. Proin gravida nibh
@@ -131,7 +132,7 @@
                     </div>
                 </div>
                 <div class="photos">
-                    <div class="photos__img"><img src="../img/camera.png" alt="cam"></div>
+                    <div class="photos__img"><img class="doc__pic" src="../img/camera.png" alt="cam"></div>
                     <div class="photos__descr">
                         <h3>Photos</h3>
                         <p class="slide__txt">This is Photoshop's version of Lorem ipsum. Proin gravida nibh
@@ -147,7 +148,7 @@
             <!--<div class="js-script-shadow device">-->
             <div class="device-tablet">
                 <!--<i class="icon-tab"></i>-->
-                <img src="img/twoTablet.png" alt="tablet">
+                <img class="device-tablet__img" src="img/twoTablet.png" alt="tablet">
             </div>
             <div class="content">
 
@@ -175,7 +176,7 @@
         <div class="container">
             <!--<div class="js-script-shadow device device&#45;&#45;laptop ">-->
             <div class="device-laptop ">
-                <img src="img/laptop.png" alt="pic">
+                <img class="device-laptop__img" src="img/laptop.png" alt="pic">
             </div>
             <div class="content-btn">
                 <h2 class="content-btn--left">This is a Heading</h2>
@@ -202,9 +203,10 @@
         <div id="map"></div>
     </div>
     <div class="circle-form">
-        <form action="#" method="post" class="circle js-script-form">
-            <input type="text" class="circle__inp" name="name" placeholder="Name">
-            <input type="text" class="circle__inp" name="email" placeholder="email address">
+        <form id="circle" action="#" method="post" class="circle js-script-form">
+            <p class="js-script-errorBlock circle__error"></p>
+            <input type="text" class="js-script-active circle__inp" name="name" placeholder="Name">
+            <input type="text" class="js-script-active circle__inp" name="email" placeholder="email address">
             <textarea name="message" placeholder="Message" id="message" class="circle__area"></textarea>
             <i id="check" class="icon-ok-circled circle__sub"></i>
         </form>
@@ -220,6 +222,7 @@
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/slick.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.flatshadow.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLvdLynWS2LCKhWdJVDHGDpneno-Poxc"></script>
 <script src="js/script.js"></script>
